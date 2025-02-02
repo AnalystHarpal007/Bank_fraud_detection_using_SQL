@@ -14,13 +14,11 @@ Fraud Indicators: Flags indicating whether a transaction is fraudulent.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Data Sources](#data-sources)
 - [Data Preprocessing](#data-preprocessing)
 - [SQL Queries](#sql-queries)
 - [Results](#results)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 Bank fraud can have severe financial and reputational consequences. To mitigate these risks, we've developed a fraud detection system that uses SQL to analyze transaction data for patterns indicative of fraudulent activity. This repository contains SQL queries and scripts used to clean, preprocess, and analyze the data. The results provide insights and alerts for potentially fraudulent transactions.
