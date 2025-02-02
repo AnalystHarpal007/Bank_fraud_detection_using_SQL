@@ -1,7 +1,16 @@
 # Bank_fraud_detection_using_SQL
 ![bank fraud](https://github.com/mobolajifalugba/Bank-fraud-detection-using-SQL/assets/51162684/e475a6ed-fe74-4aa9-af5f-61d17fd1cad0)
 
-This project is aimed at leveraging SQL to develop an efficient fraud detection system for the banking industry. Bank fraud is a significant concern, and this project demonstrates how SQL can be a powerful tool for analyzing and identifying fraudulent activities within the financial sector.
+Analyzing the dataset from the "Bank Fraud Detection using SQL
+ can yield several meaningful insights into fraudulent activities within banking transactions. Here's a structured approach to uncovering these insights:
+## Data Overview:
+The dataset comprises various attributes related to banking transactions, including:
+
+Transaction Type: Categorizes the nature of the transaction (e.g., payment, transfer).
+Transaction Amount: Specifies the monetary value involved.
+Origin and Destination Accounts: Identifiers for accounts initiating and receiving transactions.
+Balance Information: Details the account balances before and after transactions.
+Fraud Indicators: Flags indicating whether a transaction is fraudulent.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
