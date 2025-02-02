@@ -66,6 +66,40 @@ group by "namedest"
 order by "amt defrauded" desc
 limit 20;
 
+--9. Identify transactions exceeding a certain threshold to spot potential fraud
+SELECT transaction_id, amount, nameorig, namedest
+FROM transactions
+WHERE amount > 10000
+ORDER BY amount DESC;
+
+--10.Detect accounts involved in multiple transactions within a short period, which may indicate fraudulent behavior.
+SELECT nameorig, namedest, COUNT(*) as transaction_count
+FROM transactions
+WHERE isfraud = 1
+GROUP BY nameorig, namedest
+HAVING COUNT(*) > 5
+ORDER BY transaction_count DESC;
+
+--11.Find transactions where the origin or destination account balance remains unchanged, which could suggest suspicious activity.
+SELECT transaction_id, nameorig, namedest, amount
+FROM transactions
+WHERE (oldbalanceorg = newbalanceorig) OR (oldbalancedest = newbalancedest);
+
+--12.Identify accounts most frequently flagged for fraud to prioritize monitoring.
+SELECT nameorig, COUNT(*) as fraud_count
+FROM transactions
+WHERE isfraud = 1
+GROUP BY nameorig
+ORDER BY fraud_count DESC
+LIMIT 10;
+
+--13.Analyze the distribution of transaction types in fraudulent activities to detect anomalies.
+SELECT type, COUNT(*) as type_count
+FROM transactions
+WHERE isfraud = 1
+GROUP BY type
+ORDER BY type_count DESC;
+
 
 
 
